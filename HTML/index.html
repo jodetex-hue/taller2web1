@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="stylesheet" href="../ESTILOS/estilos.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechStore</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <header class="bg-slate-900 p-5 text-white">
+    <div class="mx-auto flex max-w-5xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <h1 class="text-2xl font-bold">TechStore</h1>
+      <input id="buscador" type="text" placeholder="Buscar producto..."
+        class="rounded-lg p-2 text-gray-900">
+      <button id="ver-carrito" class="rounded-lg bg-cyan-400 px-4 py-2 font-bold text-slate-900">
+        🛒 Carrito (<span id="contador">0</span>)
+      </button>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-5xl p-4">
+    <section class="my-5 rounded-xl bg-cyan-100 p-6">
+      <h2 class="text-2xl font-bold">Tecnología para tu día a día</h2>
+      <p class="mt-2">Encuentra accesorios para estudiar, trabajar y jugar.</p>
+    </section>
+
+    <h2 class="mb-3 text-xl font-bold">Categorías</h2>
+    <div class="mb-6 flex flex-wrap gap-2">
+      <button class="categoria rounded-lg bg-slate-800 px-4 py-2 text-white" data-categoria="Todos">Todos</button>
+      <button class="categoria rounded-lg bg-slate-800 px-4 py-2 text-white" data-categoria="Audio">Audio</button>
+      <button class="categoria rounded-lg bg-slate-800 px-4 py-2 text-white" data-categoria="Accesorios">Accesorios</button>
+      <button class="categoria rounded-lg bg-slate-800 px-4 py-2 text-white" data-categoria="Computación">Computación</button>
+    </div>
+
+    <h2 class="mb-3 text-xl font-bold">Productos</h2>
+    <div id="productos" class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3"></div>
+
+    <section id="seccion-carrito" class="mt-8 hidden rounded-xl bg-white p-5 shadow">
+      <div class="flex items-center justify-between">
+        <h2 class="text-xl font-bold">Mi carrito</h2>
+        <button id="cerrar-carrito" class="rounded px-3 py-1 text-2xl hover:bg-gray-100" aria-label="Cerrar carrito">×</button>
+      </div>
+      <p id="carrito-vacio" class="my-4 text-gray-500">Tu carrito está vacío. Agrega productos desde el catálogo.</p>
+      <ul id="lista-carrito" class="my-4 space-y-3"></ul>
+      <div class="flex items-center justify-between border-t pt-4">
+        <p class="text-lg font-bold">Total:</p>
+        <p id="total" class="text-xl font-bold">$0.00</p>
+      </div>
+      <div class="mt-4 flex flex-wrap gap-2">
+        <button id="vaciar-carrito" class="rounded-lg bg-rose-600 px-4 py-2 text-white hover:bg-rose-700">Vaciar carrito</button>
+        <button id="finalizar-compra" class="rounded-lg bg-cyan-500 px-4 py-2 font-bold text-slate-900 hover:bg-cyan-400">Finalizar compra</button>
+      </div>
+      <p class="mt-3 text-xs text-gray-500"></p>
+    </section>
+    <p id="mensaje" class="mt-4 text-center font-semibold text-green-700" aria-live="polite"></p>
+  </main>
+
+  <footer class="mt-10 bg-slate-900 p-4 text-center text-white">
+   
+  </footer>
+
+  <script src="../JS/script.js"></script>
+</body>
+</html>

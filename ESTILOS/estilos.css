@@ -1,0 +1,20 @@
+/* Estilos adicionales sencillos */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.tarjeta {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: white;
+  padding: 16px;
+}
+
+.tarjeta .icono {
+  font-size: 48px;
+  text-align: center;
+  padding: 12px;
+  background: #ecfeff;
+  border-radius: 8px;
+}
